@@ -2,6 +2,7 @@
 
 include_once("connection.php");
 
+
 $result = mysqli_query($mysqli, "SELECT * FROM users ORDER BY id DESC");
 ?>
 
