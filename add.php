@@ -5,32 +5,33 @@
 
 <body>
 <?php
+
 include_once("connection.php");
 
 if(isset($_POST['Submit'])) {   
-    $first_name = $_POST['first_name'];
-    $last_name = $_POST['last_name'];
+    $name = $_POST['name'];
     $age = $_POST['age'];
+    $email = $_POST['email'];
         
-    if(empty($first_name) || empty($last_name) || empty($age)) {              
-        if(empty($first_name)) {
-            echo "<font color='red'>First Name field is empty.</font><br/>";
-        }
-        
-        if(empty($last_name)) {
-            echo "<font color='red'>Last Name field is empty.</font><br/>";
+    if(empty($name) || empty($age) || empty($email)) {              
+        if(empty($name)) {
+            echo "<font color='red'>Name field is empty.</font><br/>";
         }
         
         if(empty($age)) {
             echo "<font color='red'>Age field is empty.</font><br/>";
         }
         
+        if(empty($email)) {
+            echo "<font color='red'>Email field is empty.</font><br/>";
+        }
+    
         echo "<br/><a href='javascript:self.history.back();'>Go Back</a>";
     } else { 
- 
-        $result = mysqli_query($mysqli, "INSERT INTO users(first_name,last_name,age) VALUES('$first_name','$last_name','$age')");
+     
+        $result = mysqli_query($mysqli, "INSERT INTO users(name,age,email) VALUES('$name','$age','$email')");
         
-
+        
         echo "<font color='green'>Data added successfully.";
         echo "<br/><a href='index.php'>View Result</a>";
     }

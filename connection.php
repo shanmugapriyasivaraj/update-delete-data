@@ -1,14 +1,10 @@
-<?php 
-$host ="localhost";
-$user = "root";
-$password = "";
-$db ="demo";
+<?php
 
-$conn = mysqli_connect($host,$user,$password,$db);
 
-if($conn){
-    echo "successfully connected";
-}else{
-    echo "Could not connected";
-}
+$databaseHost = 'localhost';
+$databaseName = 'test';
+$databaseUsername = 'demo';
+$databasePassword = 'test123';
+
+$mysqli = mysqli_connect($databaseHost, $databaseUsername, $databasePassword, $databaseName); 
 ?>
