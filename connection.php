@@ -2,9 +2,8 @@
 
 
 $databaseHost = 'localhost';
-$databaseName = 'test';
-$databaseUsername = 'demo';
-$databasePassword = 'test123';
-
+$databaseName = 'demo';
+$databaseUsername = 'root';
+$databasePassword = '';
 $mysqli = mysqli_connect($databaseHost, $databaseUsername, $databasePassword, $databaseName); 
 ?>
